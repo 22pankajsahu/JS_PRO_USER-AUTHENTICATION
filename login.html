@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            outline: none;
+            border: none;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        a {
+            color: grey;
+        }
+
+        ul li {
+            font-size: 1.5rem;
+            line-height: 4rem;
+        }
+
+        ul li a:hover {
+            color: red;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+
+        #mainBox {
+            width: 70%;
+            border-radius: 15px;
+            padding: 30px 60px;
+            background-color: rgb(89, 236, 255);
+            text-align: center;
+        }
+
+        button {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        button a {
+            color: black;
+        }
+
+        label {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        #login-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #login-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainBox">
+        <label for="email">Enter Email</label><br />
+        <input type="text" id="email" name="email" /><br><br>
+
+        <label for="password">Enter Password</label><br>
+        <input type="password" id="password" name="password" /><br><br>
+
+        <label for="role">Choose Role</label><br />
+        <select name="role" id="role">
+            <option value="customer">Customer</option>
+            <option value="admin">Admin</option>
+        </select><br><br>
+
+        <button id="login-btn">Login</button>
+        <button><a href="index.html">Go Back</a></button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginBtn = document.getElementById("login-btn");
+
+            loginBtn.addEventListener("click", async () => {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                const role = document.getElementById("role").value;
+
+                const bodyObject = {
+                    email,
+                    password,
+                    role,
+                };
+
+                const configuration = {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(bodyObject),
+                };
+
+                try {
+                    const response = await fetch("https://geek-store.onrender.com/user/login", configuration);
+                    const data = await response.json();
+
+                    alert(data.message);
+
+                    if (data.token) {
+                        localStorage.setItem("token", data.token);
+                        window.location.href = "index.html";
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert("An error occurred during login.");
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

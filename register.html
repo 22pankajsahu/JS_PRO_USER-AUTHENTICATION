@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            outline: none;
+            border: none;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        a {
+            color: grey;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+
+
+        #mainBox {
+            width: 70%;
+            border-radius: 15px;
+            padding: 30px 60px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        button a {
+            color: black;
+        }
+
+        label {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        #register-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #register-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainBox">
+        <label for="name">Enter Name</label><br />
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="password">Enter Password</label><br>
+        <input type="password" id="password" name="password" /> <br><br>
+
+        <label for="email">Enter Email</label><br>
+        <input type="email" name="email" id="email"><br><br>
+
+        <button id="register-btn">Register</button>
+        <button><a href="index.html">Go Back</a></button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const registerBtn = document.getElementById("register-btn");
+
+            registerBtn.addEventListener("click", async () => {
+                const name = document.getElementById("name").value;
+                const password = document.getElementById("password").value;
+                const email = document.getElementById("email").value;
+
+                const bodyObject = {
+                    name,
+                    password,
+                    email,
+                };
+
+                const configuration = {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(bodyObject),
+                };
+
+                try {
+                    const response = await fetch("https://geek-store.onrender.com/user/register", configuration);
+                    const data = await response.json();
+
+                    alert(data.message);
+
+                    if (data.message === "User Registered") {
+                        window.location.href = "index.html";
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert("An error occurred during registration.");
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
