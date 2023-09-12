@@ -30,6 +30,8 @@ Included relevant screenshots of the application here.
 
 ![Screenshot 4](https://github.com/22pankajsahu/JS_PRO_USER-AUTHENTICATION/assets/135128502/3ea94f95-c041-4b4b-84eb-7b8a83840e81)
 
+![Screenshot 5](https://github.com/22pankajsahu/JS_PRO_USER-AUTHENTICATION/assets/135128502/c34e4665-3a72-4b1f-9ca4-d033dfe9b397)
+
 ## Features
 
 - User-friendly and responsive design.
