@@ -16,11 +16,19 @@ This project represents a secure and user-friendly login page for a web applicat
 
 ## Demo
 
-You can check out the live demo of the Login Portal [here](https://22pankajsahu.github.io/m6Day13HomeWorkChallenge/).
+You can check out the live demo of the Login Portal [here](https://22pankajsahu.github.io/JS_PRO_USER-AUTHENTICATION/).
 
 ## Screenshots
 
 Included relevant screenshots of the application here.
+
+![Screenshot 1](https://github.com/22pankajsahu/JS_PRO_USER-AUTHENTICATION/assets/135128502/68638665-b41d-431f-a23f-c75504776bc8)
+
+![Screenshot 2](https://github.com/22pankajsahu/JS_PRO_USER-AUTHENTICATION/assets/135128502/9cf45847-daea-409c-8cc3-01fcb4901b99)
+
+![Screenshot 3](https://github.com/22pankajsahu/JS_PRO_USER-AUTHENTICATION/assets/135128502/b7d5d469-d54d-4bca-a7f3-e2177307be95)
+
+![Screenshot 4](https://github.com/22pankajsahu/JS_PRO_USER-AUTHENTICATION/assets/135128502/3ea94f95-c041-4b4b-84eb-7b8a83840e81)
 
 ## Features
 
@@ -80,7 +88,7 @@ The login portal is a user-friendly web application designed to provide secure a
 
 To run the Mini Calendar web application locally, follow these steps:
 
-1. Clone this repository to your local machine: `git clone https://github.com/22pankajsahu/m6Day13HomeWorkChallenge.git`
+1. Clone this repository to your local machine: `git clone https://github.com/22pankajsahu/JS_PRO_USER-AUTHENTICATION.git`
 2. Open the project folder in your code editor.
 
 ## Usage
