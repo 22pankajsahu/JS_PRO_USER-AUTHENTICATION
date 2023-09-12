@@ -1,3 +1,5 @@
+# JS_PRO_USER-AUTHENTICATION
+
 # Login Portal
 
 This project represents a secure and user-friendly login page for a web application. It ensures a clean and intuitive user interface while incorporating modern design practices. The page allows users to enter their email, password, and choose their role (either as a customer or an admin) to log in. It uses JavaScript to handle user interactions and make API requests for user authentication. The code prioritizes security by sending data as JSON and includes error handling for potential issues during the login process. Additionally, it utilizes local storage to store authentication tokens for future user sessions.
@@ -95,8 +97,8 @@ To run the Mini Calendar web application locally, follow these steps:
 
 ## Usage
 
-1. Open the Mini Calendar application in a web browser.
-2. You will see the current month, day, date, and year displayed in a visually pleasing format.
+1. Open the JS_PRO_USER-AUTHENTICATION application in a web browser.
+2. You will see the registration, Login, forotpassword and reset password.
 
 ## Contributing
 
